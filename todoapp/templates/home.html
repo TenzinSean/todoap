@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
-{% block content %}
+<h1 class="text-primary">hi</h1>
 
+{% block content %}
+  <ul>
+    {% for todo_item in all_items %}
+      <li>{{ todo_item.content }}</li>
+    {% endfor %}
+  </ul>
 {% endblock content %}
