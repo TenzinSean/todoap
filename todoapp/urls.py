@@ -1,7 +1,10 @@
 from django.urls import path
 
-from .views import HomePageView
+from .views import HomePageView, addTodo, deleteTodo
+
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name="home"),
+    path('home/', HomePageView, name="home"),
+    path('addTodo/', addTodo),
+    path('deleteTodo/<int:todo_id>/', deleteTodo),
 ]
